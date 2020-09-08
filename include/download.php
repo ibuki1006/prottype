@@ -10,7 +10,7 @@
             <div class="col-4 text-center justify-content-center align-self-center">
                 ダウンロードした乗車券を当日ご確認させていただきます。
             </div>
-            <div class="col-2 align-self-center"><button class="btn btn-primary" type="button" style="width: 150px;height: 36px;">Download  <i class="icon ion-ios-arrow-thin-down"></i></button></div>
+            <div class="col-2 align-self-center"><a href="index.php?page=progressbar"><button class="btn btn-primary" type="button" style="width: 150px;height: 36px;">Download  <i class="icon ion-ios-arrow-thin-down"></i></button></a></div>
         </div>
     </div>
 </div>
