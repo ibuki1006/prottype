@@ -3,7 +3,7 @@
 			<div class="container-fliud">
 				<div class="wrapper row">
 					<div class="preview col-md-6">
-						
+
 						<div class="preview-pic tab-content">
 						  <div class="tab-pane active" id="pic-1"><img src="http://placekitten.com/400/252" /></div>
 						  <div class="tab-pane" id="pic-2"><img src="http://placekitten.com/400/252" /></div>
@@ -18,10 +18,10 @@
 						  <li><a data-target="#pic-4" data-toggle="tab"><img src="http://placekitten.com/200/126" /></a></li>
 						  <li><a data-target="#pic-5" data-toggle="tab"><img src="http://placekitten.com/200/126" /></a></li>
 						</ul>
-						
+
 					</div>
 					<div class="details col-md-6">
-						<h3 class="product-title">men's shoes fashion</h3>
+						<h3 class="product-title">men's shoおおおおおおおes fashion</h3>
 						<div class="rating">
 							<div class="stars">
 								<span class="fa fa-star checked"></span>
