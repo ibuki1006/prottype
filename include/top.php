@@ -9,7 +9,7 @@
 							<h3>夜行バス</h3>
 						</div>
 						<div class="box-text">
-							<span>夜行バスでぃおん</span>
+							<span>夜行新幹線でぃおん</span>
 						</div>
 						<div class="box-btn">
 						    <a href="index.php?page=detail">詳細</a>
