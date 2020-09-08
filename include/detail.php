@@ -39,7 +39,7 @@
 							<span class="color blue"></span>
 						</h5> -->
 						<div class="action">
-							<button class="add-to-cart btn btn-primary" type="button">予約する</button>
+							<a href="index.php?page=reserv"><button class="add-to-cart btn btn-primary" type="button">予約する</button></a>
 							<button class="like btn btn-primary" type="button"><span class="fa fa-heart fu"></span></button>
 						</div>
 					</div>
