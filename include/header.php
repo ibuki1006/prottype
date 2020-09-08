@@ -24,8 +24,8 @@
         </div>
         <div class="row row2">
             <div class="col-sm-2">
-                <h2 style="margin:0px;"><span class="smallnav menu" onclick="openNav()">☰ <img src="./images/logo.svg" alt="ロゴ" class="logo"></span></h2>
-                <h1 style="margin:0px;"><span class="largenav"><img src="./images/logo.svg" alt="ロゴ" class="logo"></span></h1>
+                <h2 style="margin:0px;"><span class="smallnav menu" onclick="openNav()">☰<a href="index.php?page=top"><img src="./images/logo.svg" alt="ロゴ" class="logo"></a></span></h2>
+                <h1 style="margin:0px;"><span class="largenav"><a href="index.php?page=top"><img src="./images/logo.svg" alt="ロゴ" class="logo"></a></span></h1>
             </div>
             <div class="flipkart-navbar-search smallsearch col-sm-8 col-xs-11">
                 <div class="row">
