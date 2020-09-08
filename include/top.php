@@ -9,14 +9,14 @@
 							<h3>夜行バス</h3>
 						</div>
 						<div class="box-text">
-							<span>夜行バスでぃお</span>
+							<span>夜行バスでぃおん</span>
 						</div>
 						<div class="box-btn">
 						    <a href="index.php?page=detail">詳細</a>
 						</div>
 					 </div>
-                </div>	 
+                </div>
                 <?php endfor?>
-		</div>		
+		</div>
     </div>
 </div>
