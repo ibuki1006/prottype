@@ -6,7 +6,7 @@
 					<div class="box">
                     <i class="fas fa-bus fa-5x busicon"></i>
 						<div class="box-title">
-							<h3>夜行バス</h3>
+							<h3>夜行バス新幹線夜行</h3>
 						</div>
 						<div class="box-text">
 							<span>夜行新幹線でぃおん</span>
