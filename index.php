@@ -27,6 +27,10 @@
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 
     <title>チケトレ プロトタイプ</title>
+
+    <!-- favicon設定 -->
+    <link rel="shortcut icon" href="images/logo.ico">
+
   </head>
   <body>
 
