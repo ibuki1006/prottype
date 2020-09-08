@@ -17,51 +17,81 @@
                                     </div>
                                     <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                                         <div class="form-group">
-                                            <label class="control-label required" for="select">Destination</label>
+                                            <label class="control-label required" for="select">乗車地</label>
                                             <div class="select">
                                                 <select id="select" name="select" class="form-control">
-                                                    <option value="">Where you want to go</option>
-                                                    <option value="">Singapore</option>
-                                                    <option value="">Thailand</option>
-                                                    <option value="">Vietnam</option>
+                                                    <option value="">乗車地を選択してください</option>
+                                                    <option value="">23：00発　名古屋駅百合の噴水前</option>
                                                 </select>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                                         <div class="form-group">
-                                            <label class="control-label" for="datepicker">Check in</label>
+                                            <label class="control-label" for="datepicker">乗車日</label>
                                             <div class="input-group">
-                                                <input id="datepicker" name="datepicker" type="text" placeholder="Date" class="form-control" required>
-                                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span> </div>
+                                                <input type="date" name="example2">
+                                                <span class="input-group-addon"></span> </div>
                                         </div>
                                     </div>
                                     <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                                         <div class="form-group">
-                                            <label class="control-label required" for="select">Number of Persons:</label>
+                                            <label class="control-label required" for="select">降車地</label>
                                             <div class="select">
                                                 <select id="select" name="select" class="form-control">
-                                                    <option value="">Number of Persons:</option>
-                                                    <option value="">01</option>
-                                                    <option value="">02</option>
-                                                    <option value="">03</option>
+                                                    <option value="">降車地を選択して下さい</option>
+                                                    <option value="">6：00着　新宿バスタ</option>
+                                                    <option value="">6：20着　東京駅</option>
                                                 </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label required" for="select">合計料金</label>
+                                            <div class="select">
+                                                <input type="text" name="" id="" value="5,000" disabled>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                                         <div class="form-group">
-                                            <label class="control-label required" for="select">Budgets</label>
+                                            <label class="control-label required" for="select">乗車人数</label>
                                             <div class="select">
                                                 <select id="select" name="select" class="form-control">
-                                                    <option value="">Stadard</option>
-                                                    <option value="">Stadard</option>
-                                                    <option value="">Stadard</option>
+                                                    <option value="">大人男性-</option>
+                                                    <option value="">1</option>
+                                                    <option value="">2</option>
+                                                </select>
+                                            </div>
+                                            <div class="select">
+                                                <select id="select" name="select" class="form-control">
+                                                    <option value="">大人女性-</option>
+                                                    <option value="">1</option>
+                                                    <option value="">2</option>
+                                                </select>
+                                            </div>
+                                            <div class="select">
+                                                <select id="select" name="select" class="form-control">
+                                                    <option value="">小人男性-</option>
+                                                    <option value="">1</option>
+                                                    <option value="">2</option>
+                                                </select>
+                                            </div>
+                                            <div class="select">
+                                                <select id="select" name="select" class="form-control">
+                                                    <option value="">小人女性-</option>
+                                                    <option value="">1</option>
+                                                    <option value="">2</option>
                                                 </select>
                                             </div>
                                         </div>
+                                        <div class="form-group">
+                                            <label class="control-label required" for="select">合計</label>
+                                            <div class="select">
+                                                <input type="text" name="" id="" value="大人男性1名　大人女性1名" disabled>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt30">
+                                    <!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt30">
                                         <h4 class="tour-form-title">Your Travel Plan Detail</h4>
                                     </div>
                                     <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
@@ -103,15 +133,11 @@
                                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                         <button type="submit" name="singlebutton" class="btn btn-primary">send Enquiry</button>
                                     </div>
-                                </div>
+                                </div> -->
                                 </form>
                         </div>
                         
                     </div>
 	</div>
-		<div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  text-center mt20">
-              Created for <a href="https://goo.gl/9e2gny" target="_blank">easetemplate</a>
-              </div></div>
 </div>
 </div>
