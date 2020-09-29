@@ -23,6 +23,10 @@
   flex-grow: 1;
 }
 
+.preview-pic .busiconsize {
+  font-size: 400px;
+}
+
 .preview-thumbnail.nav-tabs {
   border: none;
   margin-top: 15px;

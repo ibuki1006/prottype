@@ -5,7 +5,7 @@
 					<div class="preview col-md-6">
 						
 						<div class="preview-pic tab-content">
-						  <div class="tab-pane active" id="pic-1"><i class="fas fa-bus fa-5x busicon"></i></div>
+						  <div class="tab-pane active" id="pic-1"><i class="fas fa-bus fa-5x busicon busiconsize"></i></div>
 						</div>
 					</div>
 					<div class="details col-md-6">
