@@ -16,7 +16,11 @@
     -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
         -ms-flex-positive: 1;
-            flex-grow: 1; }
+            flex-grow: 1; 
+          .busiconsize{
+            font-size: 400px;
+          }
+          }
   
   .preview-thumbnail.nav-tabs {
     border: none;
@@ -155,3 +159,17 @@
               transform: scale(1); } }
   
   /*# sourceMappingURL=style.css.map */
+
+  #status-bar{
+    width: 400px;
+    height: 24px;
+    background: #c2c2c2;
+}
+#status-bar > div {
+    width: 0;
+    height: 100%;
+    background: #3366ff;
+}
+#preview img {
+    height: 120px;
+}
