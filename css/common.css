@@ -208,6 +208,22 @@
 }
 
 /*# sourceMappingURL=style.css.map */
+#status-bar {
+  width: 400px;
+  height: 24px;
+  background: #c2c2c2;
+}
+
+#status-bar > div {
+  width: 0;
+  height: 100%;
+  background: #3366ff;
+}
+
+#preview img {
+  height: 120px;
+}
+
 /* Footer */
 section {
   padding: 60px 0;
@@ -773,6 +789,10 @@ input[type=text]:placeholder {
   color: #fff;
 }
 
+header .logo {
+  width: 30%;
+}
+
 @media screen and (max-height: 450px) {
   .sidenav a {
     font-size: 18px;
@@ -1067,6 +1087,26 @@ input:focus {
   padding-bottom: 50px;
 }
 
+#status-bar {
+  width: 1025px;
+  height: 24px;
+  background: #c2c2c2;
+}
+
+#status-bar > div {
+  width: 0;
+  height: 100%;
+  background: #3366ff;
+}
+
+#preview img {
+  width: 100%;
+}
+
+.space {
+  padding-top: 20px;
+}
+
 a {
   color: #92badd;
   display: inline-block;
@@ -1324,57 +1364,20 @@ input[type=text]:placeholder {
   width: 60%;
 }
 
-h2 {
-  margin-bottom: 10px;
+#status-bar {
+  width: 400px;
+  height: 24px;
+  background: #c2c2c2;
 }
 
-.progress-outer {
-  padding: 70px 100px;
-  margin: 50px 0;
-  box-shadow: 0 0 10px rgba(209, 219, 231, 0.7);
+#status-bar > div {
+  width: 0;
+  height: 100%;
+  background: #3366ff;
 }
 
-.progress {
-  position: relative;
-  height: 20px;
-  margin: 0;
-  overflow: visible;
-  background: #424242;
-}
-
-.progress .progress-bar {
-  border-radius: 2px;
-}
-
-.progress-bar-striped {
-  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-size: 1rem 1rem;
-  background-color: #437abd;
-}
-
-.progress .progress-value {
-  left: 90%;
-  position: absolute;
-  font-size: 14px;
-  font-weight: bold;
-  color: #e5e5e5;
-  letter-spacing: 5px;
-}
-
-.progress-bar.active {
-  animation: reverse progress-bar-stripes 1s linear infinite, animate-positive 2s;
-}
-
-@-webkit-keyframes animate-positive {
-  0% {
-    width: 0%;
-  }
-}
-
-@keyframes animate-positive {
-  0% {
-    width: 0%;
-  }
+#preview img {
+  width: 100%;
 }
 
 body {

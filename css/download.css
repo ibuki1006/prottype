@@ -2,3 +2,23 @@
   padding-top: 50px;
   padding-bottom: 50px;
 }
+
+#status-bar {
+  width: 1025px;
+  height: 24px;
+  background: #c2c2c2;
+}
+
+#status-bar > div {
+  width: 0;
+  height: 100%;
+  background: #3366ff;
+}
+
+#preview img {
+  width: 100%;
+}
+
+.space {
+  padding-top: 20px;
+}

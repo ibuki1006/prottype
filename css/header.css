@@ -219,6 +219,10 @@
   color: #fff;
 }
 
+header .logo {
+  width: 30%;
+}
+
 @media screen and (max-height: 450px) {
   .sidenav a {
     font-size: 18px;
