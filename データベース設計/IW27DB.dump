@@ -1,0 +1,128 @@
+-- MySQL dump 10.13  Distrib 5.1.73, for Win64 (unknown)
+--
+-- Host: localhost    Database: IW27
+-- ------------------------------------------------------
+-- Server version	5.1.73-community-log
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `t_ticket`
+--
+
+DROP TABLE IF EXISTS `t_ticket`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `t_ticket` (
+  `f_ticketNo` bigint(100) NOT NULL AUTO_INCREMENT,
+  `f_ticketName` varchar(100) NOT NULL,
+  `f_ticketPrice` int(100) NOT NULL,
+  `f_startPoint` varchar(50) NOT NULL,
+  `f_startTime` varchar(10) NOT NULL,
+  `f_endPoint` varchar(50) NOT NULL,
+  `f_endTime` varchar(10) NOT NULL,
+  `f_remainSeats` int(80) NOT NULL,
+  `f_DayOrNight` int(80) NOT NULL,
+  PRIMARY KEY (`f_ticketNo`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `t_ticket`
+--
+
+LOCK TABLES `t_ticket` WRITE;
+/*!40000 ALTER TABLE `t_ticket` DISABLE KEYS */;
+/*!40000 ALTER TABLE `t_ticket` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `t_ticketdetail`
+--
+
+DROP TABLE IF EXISTS `t_ticketdetail`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `t_ticketdetail` (
+  `f_ticketNo` bigint(100) NOT NULL,
+  `f_detail1` bit(1) DEFAULT NULL,
+  `f_detail2` bit(1) DEFAULT NULL,
+  `f_detail3` bit(1) DEFAULT NULL,
+  `f_detail4` bit(1) DEFAULT NULL,
+  `f_detail5` bit(1) DEFAULT NULL,
+  `f_detail6` bit(1) DEFAULT NULL,
+  `f_detail7` bit(1) DEFAULT NULL,
+  `f_detail8` bit(1) DEFAULT NULL,
+  `f_detail9` bit(1) DEFAULT NULL,
+  `f_detail10` bit(1) DEFAULT NULL,
+  `f_detail11` bit(1) DEFAULT NULL,
+  `f_detail12` bit(1) DEFAULT NULL,
+  `f_detail13` bit(1) DEFAULT NULL,
+  `f_detail14` bit(1) DEFAULT NULL,
+  `f_detail15` bit(1) DEFAULT NULL,
+  `f_detail16` bit(1) DEFAULT NULL,
+  `f_detail17` bit(1) DEFAULT NULL,
+  `f_detail18` bit(1) DEFAULT NULL,
+  PRIMARY KEY (`f_ticketNo`),
+  CONSTRAINT `t_ticketDetail_FK1` FOREIGN KEY (`f_ticketNo`) REFERENCES `t_ticket` (`f_ticketNo`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `t_ticketdetail`
+--
+
+LOCK TABLES `t_ticketdetail` WRITE;
+/*!40000 ALTER TABLE `t_ticketdetail` DISABLE KEYS */;
+/*!40000 ALTER TABLE `t_ticketdetail` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `t_user`
+--
+
+DROP TABLE IF EXISTS `t_user`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `t_user` (
+  `f_userNo` bigint(100) NOT NULL AUTO_INCREMENT,
+  `f_userId` varchar(16) NOT NULL,
+  `f_userPass` varchar(128) NOT NULL,
+  `f_userName` varchar(10) NOT NULL,
+  `f_userKana` varchar(20) NOT NULL,
+  `f_userPhone` varchar(15) DEFAULT NULL,
+  `f_userAddress` varchar(100) DEFAULT NULL,
+  `f_userMail` varchar(50) NOT NULL,
+  PRIMARY KEY (`f_userNo`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `t_user`
+--
+
+LOCK TABLES `t_user` WRITE;
+/*!40000 ALTER TABLE `t_user` DISABLE KEYS */;
+INSERT INTO `t_user` VALUES (1,'Furufuru','gibsonJ45','古田貴久','フルタタカヒロ','09012345678','愛知県名古屋市','furufuru@gmail.com'),(2,'IzuIzu','izuminJ45','山下泉','ヤマシタイズミ','08012345678','岐阜県下呂市','izuizu@gmail.com'),(3,'KataKata','katakataJ45','片岡利幸','カタオカトシユキ','9098765432','愛知県下呂市','katakata@gmail.com');
+/*!40000 ALTER TABLE `t_user` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2020-10-05 11:11:29
