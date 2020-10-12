@@ -1,5 +1,5 @@
 ﻿-- Project Name : IW27
--- Date/Time    : 2020/09/17 13:41:38
+-- Date/Time    : 2020/10/12 11:47:39
 -- Author       : nhs90418
 -- RDBMS Type   : MySQL
 -- Application  : A5:SQL Mk-2
@@ -25,13 +25,6 @@ create table t_ticketDetail (
   , f_detail9 bit(1)
   , f_detail10 bit(1)
   , f_detail11 bit(1)
-  , f_detail12 bit(1)
-  , f_detail13 bit(1)
-  , f_detail14 bit(1)
-  , f_detail15 bit(1)
-  , f_detail16 bit(1)
-  , f_detail17 bit(1)
-  , f_detail18 bit(1)
   , constraint t_ticketDetail_PKC primary key (f_ticketNo)
 ) ;
 

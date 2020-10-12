@@ -1,4 +1,9 @@
 <?php
+  require_once("./session_cookie.php");
+  require_once("./DB/db_connect.php");
+ ?>
+
+<?php
   $page = "top";
   if(isset($_GET["page"])){
     $page = $_GET["page"];
@@ -37,11 +42,19 @@
   </head>
   <body>
 
-  <?php include_once(__DIR__."/include/header.php")?>
+  <?php
+    // print_r($_SESSION);
+
+    if(fnc_chkData("session", "userNo")){
+      include_once(__DIR__."/include/header_l.php");
+    }else{
+      include_once(__DIR__."/include/header.php");
+    }
+  ?>
 
   <?php include_once(__DIR__."/include/$page.php"); ?>
 
-  <?php include_once(__DIR__."/include/footer.php")?>
+  <?php include_once(__DIR__."/include/footer.php");?>
 
     <!-- bootstrap4 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

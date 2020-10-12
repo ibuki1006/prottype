@@ -9,8 +9,7 @@
             </li>
             <li class="luxbar-item"><a href="index.php?page=top">トップ</a></li>
             <li class="luxbar-item"><a href="index.php?page=cart">カート</a></li>
-            <li class="luxbar-item"><a href="index.php?page=adduser">新規登録</a></li>
-            <li class="luxbar-item"><a href="index.php?page=login">ログイン</a></li>
+            <li class="luxbar-item"><a href="logout.php">ログアウト</a></li>
         </ul>
     </div>
 </header>

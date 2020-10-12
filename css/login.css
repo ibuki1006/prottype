@@ -254,3 +254,8 @@ input[type=text]:placeholder {
 #icon {
   width: 60%;
 }
+
+.err-msg {
+  color: #f00;
+  padding-top: 20px;
+}

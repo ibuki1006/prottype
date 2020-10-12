@@ -65,15 +65,7 @@ CREATE TABLE `t_ticketdetail` (
   `f_detail9` bit(1) DEFAULT NULL,
   `f_detail10` bit(1) DEFAULT NULL,
   `f_detail11` bit(1) DEFAULT NULL,
-  `f_detail12` bit(1) DEFAULT NULL,
-  `f_detail13` bit(1) DEFAULT NULL,
-  `f_detail14` bit(1) DEFAULT NULL,
-  `f_detail15` bit(1) DEFAULT NULL,
-  `f_detail16` bit(1) DEFAULT NULL,
-  `f_detail17` bit(1) DEFAULT NULL,
-  `f_detail18` bit(1) DEFAULT NULL,
-  PRIMARY KEY (`f_ticketNo`),
-  CONSTRAINT `t_ticketDetail_FK1` FOREIGN KEY (`f_ticketNo`) REFERENCES `t_ticket` (`f_ticketNo`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  PRIMARY KEY (`f_ticketNo`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -103,7 +95,7 @@ CREATE TABLE `t_user` (
   `f_userAddress` varchar(100) DEFAULT NULL,
   `f_userMail` varchar(50) NOT NULL,
   PRIMARY KEY (`f_userNo`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -125,4 +117,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-10-05 11:11:29
+-- Dump completed on 2020-10-12 11:54:45
