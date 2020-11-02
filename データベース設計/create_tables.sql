@@ -1,5 +1,5 @@
 -- Project Name : IW27
--- Date/Time    : 2020/10/19 12:29:15
+-- Date/Time    : 2020/10/27 9:53:33
 -- Author       : nhs90418
 -- RDBMS Type   : MySQL
 -- Application  : A5:SQL Mk-2
@@ -9,6 +9,14 @@
   これにより、drop table, create table 後もデータが残ります。
   この機能は一時的に $$TableName のような一時テーブルを作成します。
 */
+
+-- お気に入りテーブル
+--* RestoreFromTempTable
+create table t_like (
+  f_userNo BIGINT(100) not null
+  , f_ticketNo BIGINT(100) not null
+  , constraint t_like_PKC primary key (f_userNo,f_ticketNo)
+) ;
 
 -- チケット詳細
 --* RestoreFromTempTable
