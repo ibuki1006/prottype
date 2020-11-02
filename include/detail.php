@@ -42,7 +42,7 @@
 
 						<div class="action">
 							<a href="index.php?page=reserv"><button class="add-to-cart btn btn-primary" type="button">予約する</button></a>
-							<button class="like btn btn-primary <?php if($likeFlg != 0){ echo "favo"; } ?>" id="like" type="button"><span class="fa fa-heart fu"></span></button>
+							<button class="like btn <?php if($likeFlg != 0){ echo "btn-warning favo"; }else { echo "btn-primary"; } ?>" id="like" type="button"><span class="fa fa-heart fu"></span></button>
 						</div>
 					</div>
 				</div>
