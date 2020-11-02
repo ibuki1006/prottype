@@ -34,7 +34,10 @@
     <link rel="stylesheet" href="https://cdn.rawgit.com/balzss/luxbar/ae5835e2/build/luxbar.min.css">
 
     <!-- css -->
-    <link rel="stylesheet" href="./css/common.min.css">
+    <!-- <link rel="stylesheet" href="./css/common.min.css"> -->
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/<?php echo $page; ?>.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
     <!-- fontawesome -->
