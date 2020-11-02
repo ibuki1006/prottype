@@ -16,6 +16,29 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `t_like`
+--
+
+DROP TABLE IF EXISTS `t_like`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `t_like` (
+  `f_userNo` bigint(100) NOT NULL,
+  `f_ticketNo` bigint(100) NOT NULL,
+  PRIMARY KEY (`f_userNo`,`f_ticketNo`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `t_like`
+--
+
+LOCK TABLES `t_like` WRITE;
+/*!40000 ALTER TABLE `t_like` DISABLE KEYS */;
+/*!40000 ALTER TABLE `t_like` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `t_ticket`
 --
 
@@ -31,9 +54,9 @@ CREATE TABLE `t_ticket` (
   `f_endPoint` varchar(50) NOT NULL,
   `f_endTime` varchar(10) NOT NULL,
   `f_remainSeats` int(80) NOT NULL,
-  `f_DayOrNight` int(80) NOT NULL,
+  `f_DayOrNight` bit(1) NOT NULL,
   PRIMARY KEY (`f_ticketNo`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -42,6 +65,7 @@ CREATE TABLE `t_ticket` (
 
 LOCK TABLES `t_ticket` WRITE;
 /*!40000 ALTER TABLE `t_ticket` DISABLE KEYS */;
+INSERT INTO `t_ticket` VALUES (1,'あおぞらライナーAS0002',2000,'名古屋駅','23:00','大宮駅西口','6:00',40,''),(2,'WILLER EXPRESS W807便',1500,'名古屋駅','12:30','なんばOCAT','16:00',40,'\0'),(3,'MB101',830,'名鉄バスセンター','7:00','京都駅鳥丸口','9:47',40,'\0'),(4,'STAR EXPRESS T463便',3400,'名古屋南ささしまライブ','22:30','TDS','7:00',40,''),(5,'JAMJAMライナーJX171便',2200,'名古屋南ささしまライブ','7:15','USJ','10:50',40,'\0'),(6,'さくら高速バスAT111',3000,'難波','22:20','大宮駅西口','9:35',40,''),(7,'北陸道昼特急名古屋1号',3000,'名古屋駅','16:30','金沢駅','20:10',40,'\0'),(8,'東名502号',3000,'名古屋駅','18:30','静岡','22:20',40,'\0'),(9,'KOTO BUS EXPRESS',6000,'博多','21:30','高知','7:50',40,'');
 /*!40000 ALTER TABLE `t_ticket` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -54,18 +78,8 @@ DROP TABLE IF EXISTS `t_ticketdetail`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `t_ticketdetail` (
   `f_ticketNo` bigint(100) NOT NULL,
-  `f_detail1` bit(1) DEFAULT NULL,
-  `f_detail2` bit(1) DEFAULT NULL,
-  `f_detail3` bit(1) DEFAULT NULL,
-  `f_detail4` bit(1) DEFAULT NULL,
-  `f_detail5` bit(1) DEFAULT NULL,
-  `f_detail6` bit(1) DEFAULT NULL,
-  `f_detail7` bit(1) DEFAULT NULL,
-  `f_detail8` bit(1) DEFAULT NULL,
-  `f_detail9` bit(1) DEFAULT NULL,
-  `f_detail10` bit(1) DEFAULT NULL,
-  `f_detail11` bit(1) DEFAULT NULL,
-  PRIMARY KEY (`f_ticketNo`)
+  `f_detail` varchar(100) NOT NULL,
+  PRIMARY KEY (`f_ticketNo`,`f_detail`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -75,6 +89,7 @@ CREATE TABLE `t_ticketdetail` (
 
 LOCK TABLES `t_ticketdetail` WRITE;
 /*!40000 ALTER TABLE `t_ticketdetail` DISABLE KEYS */;
+INSERT INTO `t_ticketdetail` VALUES (1,'4列シート'),(1,'ひざ掛け'),(1,'トイレ付'),(1,'充電'),(1,'女性安心'),(1,'子供割引'),(2,'4列シート'),(2,'Wi－Fi'),(2,'充電'),(2,'子供割引'),(3,'4列シート'),(3,'トイレ付'),(4,'4列シート'),(4,'女性安心'),(4,'子供割引'),(4,'学生割引'),(5,'4列シート'),(5,'トイレ付'),(5,'ブランケット'),(5,'会員登録不要'),(5,'充電'),(5,'女性安心'),(6,'4列シート'),(6,'Wi－Fi'),(6,'ひざ掛け'),(6,'充電'),(6,'座席指定'),(7,'トイレ付'),(7,'充電'),(7,'子供割引'),(7,'学生割引'),(7,'往復割引'),(8,'4列シート'),(8,'トイレ付'),(8,'充電'),(8,'子供割引'),(8,'学生割引'),(8,'往復割引'),(9,'ひざ掛け'),(9,'トイレ付'),(9,'充電'),(9,'女性安心'),(9,'学生割引');
 /*!40000 ALTER TABLE `t_ticketdetail` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -95,7 +110,7 @@ CREATE TABLE `t_user` (
   `f_userAddress` varchar(100) DEFAULT NULL,
   `f_userMail` varchar(50) NOT NULL,
   PRIMARY KEY (`f_userNo`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -117,4 +132,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-10-12 11:54:45
+-- Dump completed on 2020-11-02 11:06:51
