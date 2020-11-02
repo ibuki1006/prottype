@@ -1,34 +1,24 @@
-ï»¿-- Project Name : IW27
--- Date/Time    : 2020/10/12 11:47:39
+-- Project Name : IW27
+-- Date/Time    : 2020/10/19 12:29:15
 -- Author       : nhs90418
 -- RDBMS Type   : MySQL
 -- Application  : A5:SQL Mk-2
 
 /*
-  BackupToTempTable, RestoreFromTempTableç–‘ä¼¼å‘½ä»¤ãŒä»˜åŠ ã•ã‚Œã¦ã„ã¾ã™ã€‚
-  ã“ã‚Œã«ã‚ˆã‚Šã€drop table, create table å¾Œã‚‚ãƒ‡ãƒ¼ã‚¿ãŒæ®‹ã‚Šã¾ã™ã€‚
-  ã“ã®æ©Ÿèƒ½ã¯ä¸€æ™‚çš„ã« $$TableName ã®ã‚ˆã†ãªä¸€æ™‚ãƒ†ãƒ¼ãƒ–ãƒ«ã‚’ä½œæˆã—ã¾ã™ã€‚
+  BackupToTempTable, RestoreFromTempTable‹^—–½—ß‚ª•t‰Á‚³‚ê‚Ä‚¢‚Ü‚·B
+  ‚±‚ê‚É‚æ‚èAdrop table, create table Œã‚àƒf[ƒ^‚ªc‚è‚Ü‚·B
+  ‚±‚Ì‹@”\‚Íˆê“I‚É $$TableName ‚Ì‚æ‚¤‚Èˆêƒe[ƒuƒ‹‚ğì¬‚µ‚Ü‚·B
 */
 
--- ãƒã‚±ãƒƒãƒˆè©³ç´°
+-- ƒ`ƒPƒbƒgÚ×
 --* RestoreFromTempTable
 create table t_ticketDetail (
   f_ticketNo BIGINT(100) not null
-  , f_detail1 bit(1)
-  , f_detail2 bit(1)
-  , f_detail3 bit(1)
-  , f_detail4 bit(1)
-  , f_detail5 bit(1)
-  , f_detail6 bit(1)
-  , f_detail7 bit(1)
-  , f_detail8 bit(1)
-  , f_detail9 bit(1)
-  , f_detail10 bit(1)
-  , f_detail11 bit(1)
-  , constraint t_ticketDetail_PKC primary key (f_ticketNo)
+  , f_detail VARCHAR(100) not null
+  , constraint t_ticketDetail_PKC primary key (f_ticketNo,f_detail)
 ) ;
 
--- ãƒã‚±ãƒƒãƒˆãƒ†ãƒ¼ãƒ–ãƒ«
+-- ƒ`ƒPƒbƒgƒe[ƒuƒ‹
 --* RestoreFromTempTable
 create table t_ticket (
   f_ticketNo BIGINT(100) not null auto_increment
@@ -39,11 +29,11 @@ create table t_ticket (
   , f_endPoint VARCHAR(50) not null
   , f_endTime VARCHAR(10) not null
   , f_remainSeats INT(80) not null
-  , f_DayOrNight INT(80) not null
+  , f_DayOrNight bit(1) not null
   , constraint t_ticket_PKC primary key (f_ticketNo)
 ) ;
 
--- ãƒ¦ãƒ¼ã‚¶ãƒ†ãƒ¼ãƒ–ãƒ«
+-- ƒ†[ƒUƒe[ƒuƒ‹
 --* RestoreFromTempTable
 create table t_user (
   f_userNo bigint(100) auto_increment not null auto_increment

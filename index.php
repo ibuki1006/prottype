@@ -1,6 +1,7 @@
 <?php
   require_once("./session_cookie.php");
   require_once("./DB/db_connect.php");
+  require_once("./class/ticket_class.php");
  ?>
 
 <?php
@@ -62,6 +63,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="js/resev.js"></script>
     <script src="js/main.js"></script>
+    <script src="./js/ajax.js"></script>
 
   </body>
 </html>

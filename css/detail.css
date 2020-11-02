@@ -1,3 +1,7 @@
+.remainSeats {
+  font-size: 1.3rem;
+}
+
 .preview {
   display: -webkit-box;
   display: -webkit-flex;
@@ -220,4 +224,8 @@
 
 #preview img {
   height: 120px;
+}
+
+.favo {
+  color: deeppink;
 }

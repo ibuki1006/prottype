@@ -1,0 +1,15 @@
+t_ticket
+  f_ticketNo : オートインクリメント
+  f_ticketName : チケット名
+  f_ticketPrice : 値段 (数値)
+  f_startPoint : 出発地点 (文字列)
+  f_startTime : 出発時間 (文字列 10:00みたいな感じで(24時間表記))
+  f_endPoint : 到着地点 (文字列)
+  f_endTime : 到着時間 (文字列 startTimeと同じ)
+  f_remainSeats : 残席 (数値)
+  f_DayOrNight : 昼か夜 (bit型 昼は0、夜は1)
+
+
+t_ticketDetail
+  f_ticketNo : (数値 t_ticketのチケットナンバーに合わせる)
+  f_detail : チケットの詳細 (文字列 Wi-Fi有など、適当に詳細を)

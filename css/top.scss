@@ -7,11 +7,17 @@ body{
 
 h3{
     font-family: 'Poppins', sans-serif;
+    margin: 15px 0 0 0;
+    font-size: 1.5rem;
+}
+
+span {
+  font-size: 1.1rem;
 }
 
 .social-box .box{
     background: #FFF;
-    border-radius: 10px; 
+    border-radius: 10px;
     padding: 40px 10px;
     margin: 20px 0px;
     cursor: pointer;
@@ -46,3 +52,10 @@ h3{
     color: #4183D7;
 }
 
+.time0 {
+  color: orange;
+}
+
+.time1 {
+  color: #4183D7;
+}
