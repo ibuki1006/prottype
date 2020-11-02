@@ -10,15 +10,20 @@ function getParam(name, url) {
 
 $("#like").on("click", function () {
   const ticketNo = getParam("ticketNo");
+  const favoFlg = $("#like").hasClass("favo");
   // alert(ticketNo);
   $.ajax({
     type: "POST",
     data: {
-      ticketNo: ticketNo
+      ticketNo: ticketNo,
+      favoFlg: favoFlg
     },
     url: "add_like.php",
     success: function (data) {
       alert(data);
+      $("#like").toggleClass("favo");
+      $("#like").toggleClass("btn-primary");
+      $("#like").toggleClass("btn-warning");
     },
     error: function (err) {
       console.log(err);
