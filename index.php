@@ -2,6 +2,13 @@
   require_once("./session_cookie.php");
   require_once("./DB/db_connect.php");
   require_once("./class/ticket_class.php");
+
+  $userNo = fnc_getData("session", "userNo");
+  $userName = fnc_getData("session", "userName");
+  $kana = fnc_getData("session", "kana");
+  $userPass = fnc_getData("session", "userPass");
+  $email = fnc_getData("session", "email");
+  $phoneNumber = fnc_getData("session", "phoneNumber");
  ?>
 
 <?php

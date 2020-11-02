@@ -7,6 +7,13 @@
 
 	$t_ticketDetailSelect = "select * from t_ticketDetail where f_ticketNo = {$ticketNo}";
 	$t_ticketDetailSelectResult = mysqli_query($db_link, $t_ticketDetailSelect);
+
+
+	// お気に入りかどうかを判定
+	$t_likeSelect = "select * from t_like where f_userNo = {$userNo} and f_ticketNo = {$ticketNo}";
+
+	$t_likeSelectResult = mysqli_query($db_link, $t_likeSelect);
+	$likeFlg = mysqli_num_rows($t_likeSelectResult);
 ?>
 
 <div class="container">
@@ -35,7 +42,7 @@
 
 						<div class="action">
 							<a href="index.php?page=reserv"><button class="add-to-cart btn btn-primary" type="button">予約する</button></a>
-							<button class="like btn btn-primary" id="like" type="button"><span class="fa fa-heart fu"></span></button>
+							<button class="like btn btn-primary <?php if($likeFlg != 0){ echo "favo"; } ?>" id="like" type="button"><span class="fa fa-heart fu"></span></button>
 						</div>
 					</div>
 				</div>
