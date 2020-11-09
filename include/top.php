@@ -1,5 +1,13 @@
 <?php
-  $t_ticketSelect = "select * from t_ticket";
+  $allFlg = false;
+
+  $t_ticketSelect = "select * from t_ticket order by rand() limit 9";
+  if(isset($_GET["view"])){
+    if($_GET["view"] === "all"){
+      $t_ticketSelect = "select * from t_ticket";
+      $allFlg = true;
+    }
+  }
   $t_ticketSelectResult = mysqli_query($db_link, $t_ticketSelect);
 
   $tickets = []; // チケットクラスのインスタンスを格納する配列
@@ -28,6 +36,11 @@
 					 </div>
           </div>
         <?php endforeach; ?>
+        <?php if(!$allFlg): ?>
+          <a href="index.php?page=top&view=all" class="btn-border-bottom">全て見る</a>
+        <?php else: ?>
+          <a href="index.php" class="btn-border-bottom">閉じる</a>
+        <?php endif; ?>
     </div>
   </div>
 </div>

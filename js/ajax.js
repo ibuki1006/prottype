@@ -19,11 +19,17 @@ $("#like").on("click", function () {
       favoFlg: favoFlg
     },
     url: "add_like.php",
+    dataType: "json",
     success: function (data) {
-      alert(data);
-      $("#like").toggleClass("favo");
-      $("#like").toggleClass("btn-primary");
-      $("#like").toggleClass("btn-warning");
+      // console.log(data);
+      if(data.res == 0) {
+        alert(data.msg);
+        $("#like").toggleClass("favo");
+      }else if(data.res == 1) {
+        alert(data.msg);
+      }else if(data.res == 2) {
+        window.location.href = data.url;
+      }
     },
     error: function (err) {
       console.log(err);

@@ -1,5 +1,5 @@
 -- Project Name : IW27
--- Date/Time    : 2020/10/27 9:53:33
+-- Date/Time    : 2020/11/05 14:51:14
 -- Author       : nhs90418
 -- RDBMS Type   : MySQL
 -- Application  : A5:SQL Mk-2
@@ -15,7 +15,8 @@
 create table t_like (
   f_userNo BIGINT(100) not null
   , f_ticketNo BIGINT(100) not null
-  , constraint t_like_PKC primary key (f_userNo,f_ticketNo)
+  , f_date DATETIME not null
+  , constraint t_like_PKC primary key (f_userNo,f_ticketNo,f_date)
 ) ;
 
 -- チケット詳細
