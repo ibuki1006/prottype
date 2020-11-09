@@ -2,8 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding: 30px;
   margin-top: 50px;
   background-color: #ddd;
   margin-bottom: 50px;
@@ -34,4 +33,24 @@
 
 .like-wrap .container .like-item .content .like-out a {
   color: #fff;
+}
+
+.name-product {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.date {
+  font-size: 1.1rem;
+}
+
+.total {
+  font-weight: 600;
+  font-size: 1.15rem;
+}
+
+.none {
+  text-align: center;
+  margin: 100px 0;
+  font-size: 1.8rem;
 }

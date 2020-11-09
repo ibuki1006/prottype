@@ -1,13 +1,13 @@
 <div class="content">
 <div class="container">
     	<div class="row">
-	
+
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb30 text-center">
                         <h2>Tour & Travel Reservation Booking Form</h2>
                         </div>
                         </div>
 	<div class="row">
-	
+
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb30">
                         <div class="tour-booking-form">
                             <form>
@@ -137,7 +137,7 @@
                                 </div> -->
                                 </form>
                         </div>
-                        
+
                     </div>
 	</div>
 </div>

@@ -8,12 +8,15 @@
 	$t_ticketDetailSelect = "select * from t_ticketDetail where f_ticketNo = {$ticketNo}";
 	$t_ticketDetailSelectResult = mysqli_query($db_link, $t_ticketDetailSelect);
 
+	$likeFlg = 0;
 
 	// お気に入りかどうかを判定
-	$t_likeSelect = "select * from t_like where f_userNo = {$userNo} and f_ticketNo = {$ticketNo}";
+	if(fnc_chkData("session", "userNo")){ // ログインしていたら
+		$t_likeSelect = "select * from t_like where f_userNo = {$userNo} and f_ticketNo = {$ticketNo}";
 
-	$t_likeSelectResult = mysqli_query($db_link, $t_likeSelect);
-	$likeFlg = mysqli_num_rows($t_likeSelectResult);
+		$t_likeSelectResult = mysqli_query($db_link, $t_likeSelect);
+		$likeFlg = mysqli_num_rows($t_likeSelectResult);
+	}
 ?>
 
 <div class="container">
@@ -41,11 +44,24 @@
 						<h4 class="price">値段：<span><?php echo "¥".number_format($ticket->getPrice()); ?></span></h4>
 
 						<div class="action">
-							<a href="index.php?page=reserv"><button class="add-to-cart btn btn-primary" type="button">予約する</button></a>
-							<button class="like btn <?php if($likeFlg != 0){ echo "btn-warning favo"; }else { echo "btn-primary"; } ?>" id="like" type="button"><span class="fa fa-heart fu"></span></button>
+							<a><button id="reserve" class="add-to-cart btn btn-primary" type="button">予約する</button></a>
+							<button class="like btn btn-warning <?php if($likeFlg != 0){ echo "favo"; }?>" id="like" type="button"><span class="fa fa-heart fu"></span></button>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		$("#reserve").on("click", function () {
+			<?php if(fnc_chkData("session", "userNo")): ?>
+				const url = "index.php?page=reserve";
+			<?php else: ?>
+				const url = "index.php?page=login";
+			<?php endif; ?>
+
+			window.location.href = url;
+		});
+	</script>
